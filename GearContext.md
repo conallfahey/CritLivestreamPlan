@@ -2,7 +2,7 @@ I double-checked the current hardware and specs, and I would change several thin
 
 The biggest changes are: BirdDog X5 Ultra becomes my preferred PTZ at the higher budget, PTZOptics Move 4K 20X remains the value choice, Magewell remains a good encoder choice, HD8 ISO is the right higher-end switcher, and the roaming handheld should not use the same directional RF architecture as the fixed PTZs.
 
-Also, I’d standardize the entire show at 1080p59.94. That’s the right tradeoff for fast bike racing.
+Also, I’d standardize the entire race coverage workflow at 1080p59.94. That’s the right tradeoff for fast bike racing.
 
 Revised builds
 
@@ -72,7 +72,7 @@ One Ethernet connection effectively handles video transmission, PTZ control and 
 
 This is one of the biggest revisions.
 
-The  ⁠BirdDog X5 Ultra specifications show that it has:
+The BirdDog X5 Ultra specification list includes:
 
 * 4K60
 * 20x optical
@@ -102,7 +102,7 @@ I’d actually rent/test:
 
 BirdDog X5 Ultra vs PTZOptics Move 4K 20X
 
-in a dark venue before buying four.
+outdoors in changing race-day light before buying four.
 
 ⸻
 
@@ -374,7 +374,7 @@ wireless intercom
 
 Peplink + Starlink + two cellular carriers
 
-and run the entire show at:
+and run the entire race coverage workflow at:
 
 1080p59.94
 

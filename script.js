@@ -8,7 +8,7 @@ const menuLinks=document.getElementById('menuLinks');
 let activeIndex=0;
 
 total.textContent=String(slides.length).padStart(2,'0');
-const sections={intro:'Overview',compare:'Compare',budget:'Budget builds',system:'How it works',gear:'Gear detail',shopping:'Gear links',decision:'Planning notes'};
+const sections={intro:'Overview',compare:'Compare',budget:'Budget builds',system:'How it works',gear:'Gear detail',decision:'Planning notes'};
 Object.entries(sections).forEach(([key,label])=>{
   const group=document.createElement('div'); group.className='menu-group';
   group.innerHTML=`<h4>${label}</h4>`;
@@ -30,5 +30,5 @@ document.querySelectorAll('.next-btn').forEach(b=>b.onclick=()=>go(activeIndex+1
 function openMenu(){menu.classList.add('open');document.getElementById('menuToggle').setAttribute('aria-expanded','true')}
 function closeMenu(){menu.classList.remove('open');document.getElementById('menuToggle').setAttribute('aria-expanded','false')}
 document.getElementById('menuToggle').onclick=openMenu;document.getElementById('menuClose').onclick=closeMenu;
-document.querySelectorAll('[data-search]').forEach(card=>{const query=encodeURIComponent(card.dataset.search);const links=document.createElement('div');links.className='retailer-links';links.innerHTML=`<a href="https://www.bhphotovideo.com/c/search?Ntt=${query}&N=0&InitialSearch=yes&sts=ma" target="_blank" rel="noopener">B&amp;H ↗</a><a href="https://www.amazon.com/s?k=${query}" target="_blank" rel="noopener">Amazon ↗</a>`;card.appendChild(links)});
+document.querySelectorAll('.table-links[data-search]').forEach(cell=>{const query=encodeURIComponent(cell.dataset.search);cell.innerHTML=`<a href="https://www.bhphotovideo.com/c/search?Ntt=${query}&N=0&InitialSearch=yes&sts=ma" target="_blank" rel="noopener">B&amp;H ↗</a> <a href="https://www.amazon.com/s?k=${query}" target="_blank" rel="noopener">Amazon ↗</a>`;});
 document.addEventListener('keydown',e=>{if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();menu.classList.contains('open')?closeMenu():openMenu()}else if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key==='PageDown')go(activeIndex+1);else if(e.key==='ArrowLeft'||e.key==='ArrowUp'||e.key==='PageUp')go(activeIndex-1);else if(e.key==='Escape')closeMenu()});
